@@ -39,7 +39,7 @@ public class JwtTokenValidator extends OncePerRequestFilter {
             } catch (Exception e) {
                 throw new BadCredentialsException("Invalid token...  OPM");
             }
-            filterChain.doFilter(request, response);
         }
+        filterChain.doFilter(request, response);
     }
 }

@@ -27,7 +27,7 @@ public class User {
     private boolean login_with_google;
     @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Tweet> tweets = new ArrayList<>();
+    private List<Tweet> tweet = new ArrayList<>();
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Like> likes = new ArrayList<>();
 

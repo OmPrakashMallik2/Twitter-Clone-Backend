@@ -15,12 +15,11 @@ public class Tweet {
 
     @ManyToOne
     private User user;
-
     private String content;
     private String image;
     private String video;
     @OneToMany(mappedBy = "tweet", cascade = CascadeType.ALL)
-    private List<User> likes = new ArrayList<>();
+    private List<Like> likes = new ArrayList<>();
 
     @OneToMany
     private List<Tweet> replyTweets = new ArrayList<>();
